@@ -1,0 +1,31 @@
+{
+  "name": "supamigration",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "prettier": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint:cli": "turbo lint --filter=vdbs",
+    "build:cli": "turbo --filter=vdbs build",
+    "dev:cli": "turbo --filter=vdbs dev",
+    "release": "changeset version",
+    "changeset:add": "changeset add",
+    "changeset:status": "changeset status --verbose",
+    "release:cli": "changeset publish",
+    "dev:web": "turbo --filter=web dev"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/cli": "2.27.1"
+  }
+}
